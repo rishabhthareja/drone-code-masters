@@ -1,7 +1,14 @@
 """
+Project: DJI Tello Drone - Takeoff, Hover, and Land
 Author: Rishabh Thareja
-Description: This code will make DJI Tello drone take off, hover in the air for 2 seconds, and then land.
-Please make sure to connect the drone to a Wi-Fi network before executing the code.
+
+Description:
+This Python code controls a DJI Tello drone using the djitellopy library. The code instructs the drone to take off, hover in the air for 2 seconds, and then land gracefully.
+
+Please make sure to connect the drone to a Wi-Fi network before executing the code. Ensure that you have enough open space and follow all safety guidelines while operating the drone.
+
+Note: This code assumes you have already installed the djitellopy library.
+
 """
 
 from time import sleep
