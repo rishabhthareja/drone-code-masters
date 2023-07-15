@@ -14,6 +14,9 @@ Note: This code assumes you have already installed the djitellopy library.
 from time import sleep
 from djitellopy import Tello
 
+# Battery threshold value
+battery_threshold = 70
+
 # Create a Tello object
 drone = Tello()
 
@@ -25,11 +28,12 @@ battery_percentage = drone.get_battery()
 
 
 # Check if the battery percentage is above 80
-if battery_percentage > 30:
+if battery_percentage > battery_threshold:
     print("The battery percentage is: ", battery_percentage)
     # Take off the drone
     drone.takeoff()
     print("Drone is taking off...")
+
     # The delay of 5 seconds is added to avoid any
     # failed communication between laptop/PC and tello drone
     sleep(5)
